@@ -30,3 +30,9 @@ Route::resource('users', 'UsersController');
 // Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit'); // 编辑
 // Route::patch('/users/{user}', 'UsersController@update')->name('users.update'); // 保存
 // Route::delete('/users/{user}', 'UsersController@destory')->name('users.destory'); // 删除
+
+// 登录
+Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@store')->name('login');
+// 注销
+Route::delete('logout', 'SessionsController@destroy')->name('logout');
